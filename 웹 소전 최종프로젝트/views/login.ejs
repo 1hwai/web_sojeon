@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/logform.css">
+</head>
+<body>
+    <%- include ('./sauce/logheader') %>
+    <div id="loginForm">
+        <div id="loginPosition">
+            <form action="/login" method="post">
+                <div id="infoContainer">
+                    <input class="infoInput" type="text" name="userid" placeholder="아이디">
+                    <br>
+                    <input class="infoInput" type="password" name="password" placeholder="비밀번호">
+                </div>
+                <button class="submitButton" type="submit">
+                    로그인
+                </button>
+            </form>
+            <div id="noAccount">
+                계정이 없으신가요?
+                <a href="/register">회원가입하기</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

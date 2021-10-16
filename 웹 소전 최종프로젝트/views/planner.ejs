@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= planner.title %></title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/team.css">
+</head>
+<body>
+    <header>
+        <div>
+            <a href="/t/<%= teamid %>/planner">
+                뒤로가기
+            </a>
+        </div>
+    </header>
+    <article>
+        <div id="planFormwrapper">
+            <form action="/plan" method="POST">
+                <input type="checkbox" name="important" value="true">
+                <input id="planContents" type="text" name="contents" maxlength="50" placeholder="일정을 입력하십시오 (50자 제한)">
+                <button id="submitButton" type="submit">추가</button>
+                <input id="planMemo" type="text" name="shortmemo" maxlength="25" placeholder="짧은 메모(20자 제한)    ex)기한, 등등">
+                <input class="hidden" type="text" name="teamid" value="<%= teamid %>">
+                <input class="hidden" type="text" name="plannerid" value="<%= planner._id %>">
+            </form>
+        </div>
+        <ul>
+            <% for (let i = 0; i < plan.length; i++) { %>
+                <li>
+                    <% if (plan[i].important) { %>
+                        <h2 class="contents"><%= plan[i].contents %></h2>
+                    <% } else { %>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <h4 class="contents"><%= plan[i].contents %></h4>
+                    <% } %>
+                    <% if (plan[i].shortmemo) { %>
+                        <p class="shortmemo"><%= plan[i].shortmemo %></p>
+                    <% } %>
+                    <form action="/updown" method="POST" class="planbtn">
+                        <input class="hidden" type="text" name="planid" value="<%= plan[i]._id %>">
+                        <input class="hidden" type="text" name="planBelonging" value="<%= plan[i].belonging %>">
+                        <% if (i != 0) { %>
+                            <button name="updown" value="up">↑</button>
+                        <% } %>
+                        <% if (i != plan.length-1) { %>
+                            <button name="updown" value="down">↓</button>
+                        <% } %>
+                    </form>
+                    <form action="/delplan" method="post" class="planbtn">
+                        &nbsp;&nbsp;&nbsp;&nbsp;<button name="planid" value="<%= plan[i]._id %>">삭제</button>
+                        <input class="hidden" type="text" name="plannerid" value="<%= planner._id %>">
+                    </form>
+                </li>
+            <% } %>
+        </ul>
+    </article>
+</body>
+</html>

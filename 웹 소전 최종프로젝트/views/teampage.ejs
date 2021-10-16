@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= team.teamname %></title>
+    <% if (page == 'home') { %>
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/nav.css">
+        <link rel="stylesheet" href="../css/team.css">
+    <% } else { %>
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="stylesheet" href="../../css/header.css">
+        <link rel="stylesheet" href="../../css/nav.css">
+        <link rel="stylesheet" href="../../css/team.css">
+    <% }%>
+</head>
+<body>
+    <header>
+        <a href="/h">
+            <% if (page == 'home') { %>
+                <img src="../img/coplanlogo.png"
+                    id="logoButton" alt="홈">
+            <% } else { %>
+                <img src="../../img/coplanlogo.png"
+                    id="logoButton" alt="홈">
+            <% }%>
+        </a>
+        <div>
+            <% if (page == 'home') { %>
+                <a href="/myprofile">
+                    <img id="userImg" src="../img/user.png" alt="유저사진">
+                </a>
+            <% } else { %>
+                <a href="/myprofile">
+                    <img id="userImg" src="../../img/user.png" alt="유저사진">
+                </a>
+            <% }%>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/t/<%= team._id %>">홈</a></li>
+            <li><a href="/t/<%= team._id %>/planner">계획</a></li>
+            <li><a href="/t/<%= team._id %>/vote">투표</a></li>
+            <li><a href="/t/<%= team._id %>/settings">설정</a></li>
+        </ul>
+    </nav>
+    <% if (page == 'home') {%>
+        <%- include ('./sauce/team/teamhome')%>
+    <% } else if (page == 'planner') { %>
+        <%- include ('./sauce/team/teamplanner')%>
+    <% } else if (page == 'vote') { %>
+        <%- include ('./sauce/team/')%>
+    <% } else if (page == 'settings') { %>
+        <%- include ('./sauce/team/teamsettings')%>
+    <%}%>
+    <script src="../js/today.js"></script>
+</body>
+</html>

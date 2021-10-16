@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>내 정보</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/teamlist.css">
+</head>
+<body>
+    <header>
+        <a href="/h">
+            <img src="img/coplanlogo.png"
+                id="logoButton" alt="홈">
+        </a>
+        <div>
+            <a href="/myprofile">
+                <img id="userImg" src="img/user.png" alt="유저사진">
+            </a>
+        </div>
+    </header>
+    <form action="/logout" method="POST">
+        <button>로그아웃</button>
+    </form>
+    <form action="/resign" method="POST">
+        <button>회원 탈퇴</button>
+    </form>
+    <section>
+        <article>
+            <h3>내 팀</h3>
+            <%- include ('./sauce/teamList')%>
+            <button id="addTeam">
+                <a href="/t/teamin">팀 가입</a>
+            </button>
+            <button id="addTeam">
+                <a href="/t/team">팀 만들기</a>
+            </button>
+        </article>
+    </section>
+</body>
+</html>

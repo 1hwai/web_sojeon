@@ -1,0 +1,75 @@
+.infoInput {
+    background-color: #313131;
+    border: 1px solid white;
+    width: 288px;
+    height: 27px;
+    font-size: 1em;
+    padding: 5px;
+}
+
+
+#loginForm {
+    height: 400px;
+    width: 70vw;
+    min-width: 500px;
+    margin: 200px auto;
+    border-radius: 20px;
+    background-color: #333333;
+    display: flex;
+    align-items: center;
+    box-shadow: 10px 10px 40px 5px #242424;
+}
+
+#loginPosition {
+    width: 400px;
+    margin: auto;
+    line-height: 40px;
+    text-align: center;
+}
+
+#loginPosition > form {
+    display: flex;
+}
+
+#logo {
+    height: 100px;
+}
+
+#infoContainer {
+    height: 60px;
+    width: 300px;
+    line-height: 30px;
+}
+
+.submitButton {
+    width: 80px;
+    height: 78px;
+    background-color: #4a5d86ff;
+    float: right;
+    border-radius: 0px 5px 5px 0px;
+    border: none;
+}
+
+#noAccount {
+    margin-top: 20px;
+}
+
+#registerSubmit {
+    height: 118px;
+}
+
+#registerCancel{
+    height: 30px;
+    width: 190px;
+    border-radius: 5px;
+}
+
+#registerCancel {
+    background-color: #2a2a2a;
+    border: none;
+    margin-top: 20px;
+}
+
+#registerCancel a {
+    text-decoration: none;
+}

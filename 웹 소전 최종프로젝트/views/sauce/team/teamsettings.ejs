@@ -1,0 +1,20 @@
+<h2>팀명: <%= team.teamname %></h2>
+<h4>팀장: <%= team.ownerid%></h4>
+<ul>
+    구성원:
+    <% for (let i = 0; i < team.members.length; i++) { %>
+        <li><%= team.members[i].memberid%></li>
+    <% } %>
+</ul>
+    
+<% if (authorized === true) { %>
+    <form action="/delteam" method="POST">
+        <button name="teamid" value="<%= team._id %>">팀 없애기</button>
+        <input class="hidden" type="text" name="option" value="delete">
+    </form>
+    
+<% } %>
+<form action="/delteam" method="POST">
+    <button name="<%= team._id %>">팀 탈퇴(작동x)</button>
+    <input class="hidden" type="text" name="option" value="resign">
+</form>

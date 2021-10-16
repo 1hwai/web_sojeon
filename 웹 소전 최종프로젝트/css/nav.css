@@ -1,0 +1,23 @@
+nav {
+    background-color: #313131;
+    height: 35px;
+    align-items: center;
+}
+
+nav ul {
+    margin: 0px;
+    width: 50%;
+    display: flex;
+    list-style: none;
+    text-align: center;
+    margin: 0 auto;
+}
+
+nav ul li {
+    width: 40px;
+    margin: 5px auto;
+}
+
+nav ul li a {
+    text-decoration: none;
+}

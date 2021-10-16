@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CoPlan</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/header.css">
+</head>
+<body>
+    <header>
+        <a href="/">
+            <img src="img/coplanlogo.png"
+                id="logoButton" alt="홈">
+        </a>
+        <div>
+            <%if (loggedIn) {%>
+                <a href="/h">
+                    <img id="userImg" src="img/user.png" alt="유저사진">
+                </a>
+            <%} else {%>
+                <ul class="noLogged">
+                    <li><a href="/login" style="color: #4a5d86ff">로그인</a></li>
+                    <li><a href="/register">회원가입</a></li>
+                </ul>
+            <%}%>
+        </div>
+    </header>
+</body>
+</html>

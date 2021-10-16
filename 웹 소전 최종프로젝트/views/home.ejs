@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>홈 - CoPlan</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/teamlist.css">
+</head>
+<body>
+    <header>
+        <a href="/h">
+            <img src="img/coplanlogo.png"
+                id="logoButton" alt="홈">
+        </a>
+        <div>
+            <a href="/myprofile">
+                <img id="userImg" src="img/user.png" alt="유저사진">
+            </a>
+        </div>
+    </header>
+    <section>
+        <br>
+        <article>
+            <h3>내 팀</h3>
+            <hr>
+            <%- include ('./sauce/teamList')%>
+        </article>
+    </section>
+</body>
+</html>

@@ -1,0 +1,43 @@
+header {
+    background-color: #4a5d86ff;
+    height: 40px;
+    z-index: 1;
+}
+
+#logoButton {
+    height: 40px;
+    float: left;
+}
+
+#userImg {
+    height: 30px;
+    float: right;
+    border-radius: 50%;
+}
+
+.noLogged {
+    float: right;
+    margin-top: 0px;
+    margin-right: 5px;
+    display: flex;
+    list-style: none;
+    color: #000000;
+    height: 100%;
+}
+
+.noLogged li {
+    color: #ffffff;
+    font-weight: 900;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 6px;
+}
+
+.noLogged li:first-child {
+    background-color: #ffffff;
+}
+
+.noLogged li a {
+    text-decoration: none;
+}

@@ -1,0 +1,45 @@
+#teamList {
+    height: auto;
+    width: 80vw;
+    margin: auto auto;
+    padding: 20px;
+    list-style: none;
+    text-decoration: none;
+    display: table;
+    
+}
+
+.teamLinker {
+    width: 70vw;
+    height: 2em;
+    margin: 2px auto;
+    padding: 3px;
+    padding-left: 10px;
+    border: 0.5px solid #9c9c9c;
+    border-radius: 5px;
+    display: flex;
+}
+
+.teamLinker:hover {
+    background-color: #383838;
+}
+
+.teamLinker a {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.teamLinker a:hover {
+    text-decoration: none;
+    color: #98abff;
+}
+
+#addTeam {
+    width: 150px;
+    margin-left: 70vw;
+}
+
+hr {
+    width: 90%;
+    border: 0.5px solid #9c9c9c;
+}
